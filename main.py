@@ -106,7 +106,7 @@ def create_table_streams(cursor):
 # Inserting data from csv to table awards.
 def insert_into_awards(cursor):
     # First we read the data then we insert it into a tuple then we add it as queries to a list (insert_sql).
-    path = os.getcwd() + "/data/AWARDS.csv"
+    path = os.getcwd() + "/AWARDS.csv"
     with open(path, encoding="utf-8") as csv_file:
         csvfile = csv.reader(csv_file, delimiter=';')
         insert_sql = []
@@ -131,7 +131,7 @@ def insert_into_awards(cursor):
 
 # Inserting data from csv to table IMDB.
 def insert_into_IMDB(cursor):
-    path = os.getcwd() + "/data/IMDB.csv"
+    path = os.getcwd() + "/IMDB.csv"
     with open(path, encoding="utf-8") as csv_file:
         csvfile = csv.reader(csv_file, delimiter=';')
         insert_sql = []
@@ -156,7 +156,7 @@ def insert_into_IMDB(cursor):
             #print("OK")
 
 def insert_into_streams(cursor):
-    path = os.getcwd() + "/data/STREAMS.csv"
+    path = os.getcwd() + "/STREAMS.csv"
     with open(path, encoding="utf-8-sig") as csv_file:
         csvfile = csv.reader(csv_file, delimiter=';')
         insert_sql = []
